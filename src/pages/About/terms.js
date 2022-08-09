@@ -2,7 +2,7 @@ export const ABOUT_PARAGRAPH = ` O desafio proposto envolveu a implementação d
 no backend.
 `
 export const TECHNOLOGIES = `No frontend, foi utilizado React.js, com Sweetalert2 para a criação de modais, 
-e React Router Dom para o roteamento.
+React Router Dom para o roteamento, e a utilização do Local Storage do navegador para visualização de números calculados anteriormente.
 O backend conta com Spring Boot e Java para o processamento do cálculo e retorno da resposta.`;
 export const DEPLOY = `Tanto o backend quanto a aplicação como um todo tiveram seu deploy feito no heroku.`;
 export const ABOUT_THE_CHALLENGE = `sobre o desafio_`

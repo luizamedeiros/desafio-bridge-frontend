@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import {
+    NO_HISTORY,
     NUMBER_INPUTTED,
     AMOUNT_OF_NUMBERS,
+    HISTORY_EXPLANATION,
 } from './terms.js';
 
 const History = () =>{
     const [answerHistory, setAnswerHistory] = useState([]);
 
     useEffect(()=>{
-        const localStorageAnswerHistory = localStorage.getItem('answerHistory') ?? [];
-        setAnswerHistory(JSON.parse(localStorageAnswerHistory));
-      
+        const localStorageAnswerHistory = localStorage.getItem('answerHistory');
+        if(localStorageAnswerHistory){
+            setAnswerHistory(JSON.parse(localStorageAnswerHistory));
+        }
     }, [])
 
     return(
@@ -20,24 +23,33 @@ const History = () =>{
                 <h1>
                     histórico_
                 </h1>
-
-            </div>
-            <div className='historyInstancesDiv'>
-                <ul>
-                { answerHistory.map((historyInstance)=>(
-                <li className='historyInstanceWrapper'>
                 <p>
-                    {NUMBER_INPUTTED}{historyInstance.number}
-                    <br></br>
-                    {AMOUNT_OF_NUMBERS}{historyInstance.amount}
-                    <br></br>
-                    Números: {historyInstance.numbers}
-                    <br></br>
+                    {HISTORY_EXPLANATION}
                 </p>
-                </li>
-                ))}
-                </ul>
             </div>
+                { answerHistory.length > 0 ? (
+                    <div className='historyInstancesDiv'>
+                        <ul>
+                            { answerHistory.map((historyInstance)=>(
+                                <li>
+                                    <p>
+                                        {NUMBER_INPUTTED}{historyInstance.number}
+                                        <br></br>
+                                        {AMOUNT_OF_NUMBERS}{historyInstance.amount}
+                                        <br></br>
+                                        Números: {historyInstance.numbers}
+                                        <br></br>
+                                    </p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    ) 
+                    :
+                    <ul className='emptyDiv'>
+                        <li><p> {NO_HISTORY}</p></li>
+                    </ul>
+                }     
         </div>
     );
 }
