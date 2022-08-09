@@ -1,85 +1,20 @@
-.content-container{
-  display: flex;
-  flex-wrap: wrap;
-  height: 92vh
-}
-ul{
+.navbar{
   background-color: #0094FC;
   width: 100%;
   display: flex;
   margin: 0;
   padding: 0;
-  justify-content: space-evenly;
-  list-style: none;
   align-items: center;
-  height: 8vh
+  height: 9vh;
+  justify-content: space-between;
 }
-a{
-  text-decoration: none;
-  color: #24252E
+.navbar li{
+  margin-right: 30px;
 }
+
 .headerText {
   color: #FFFFFF;
   font-size: x-large;
-}
-.textDiv {
-  align-items: center;
-  align-content: center;
-  background-color: #24252E;
-  color: #FFFFFF;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-}
-.content{
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-html{
-  min-height: 100%;
-  height: 100%;
-}
-input{
-  margin: 5px;
-}
-label {
-  margin-left: 7px;
-}
-img{
-  width: 30%;
-}
-p{
-  margin: 0 50px;
-}
-form{
-  display: flex;
-  align-items: flex-end;
-}
-.submitButton{
-  color: #0094FC;
-  background-color: #FFFFFF;
-  font-weight: bolder;
-  border: 1.5px solid grey;
-  border-radius: 5px;
-}
-.inputsDiv {
-  align-items: center;
-  background-color: #FFFFFF;
-  color: #24252E;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex: 2;
-}
-
-.title {
-  color: #0094FC;
-  font-size: xx-large;
 }
 
 .column {
@@ -87,16 +22,14 @@ form{
   flex-direction: column;
   width: 50%;
 }
-
-.inputFieldDiv{
-  display: flex;
-  flex-direction: column;
+.navbar li:first-child{
+  margin-right: 50vw;
+  margin-left: 5%;
 }
-
-.submitButton:hover {
-  cursor: pointer;
+.navbar li:first-child:hover{
+  text-decoration: none;
 }
-a:hover{
+.navbar li:hover{
   text-decoration: underline;
 }
 @media only screen and (max-width: 500px) {

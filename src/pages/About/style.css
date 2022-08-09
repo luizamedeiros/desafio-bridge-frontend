@@ -1,0 +1,39 @@
+.content-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 91vh
+}
+
+.textDiv {
+    align-items: center;
+    align-content: center;
+    background-color: #24252E;
+    color: #FFFFFF;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.content{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linksDiv {
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #24252E;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 2;
+}
+
+img{
+    width: 30%;
+}

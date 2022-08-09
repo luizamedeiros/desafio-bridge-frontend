@@ -4,7 +4,36 @@ body, input {
   font-family: ibm-plex-sans, sans-serif;
 }
 
+h1{
+  color: #0094FC;
+  font-size: xx-large;
+}
+
+a{
+  text-decoration: none;
+  color: #24252E;
+}
+
+ul {
+  list-style: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+input{
+  margin: 5px;
+}
+label {
+  margin-left: 7px;
+}
+img{
+  width: 30%;
+}
+p{
+  margin: 0 50px;
+}
+form{
+  display: flex;
+  align-items: flex-end;
 }

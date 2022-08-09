@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import '../App.css';
+import './style.css';
 import Swal from 'sweetalert2';
-import apiService from '../services/apiService';
+import apiService from '../../services/apiService';
 
 const Home =()=>{
     const [userInput, setUserInput] = useState();
+    const answerHistory = localStorage.getItem('answerHistory');
+    let answerHistoryArray = [];
+    if(answerHistory){
+        answerHistoryArray = JSON.parse(answerHistory);
+    }
 
     const onSubmit = (e) => {
       e.preventDefault();
@@ -14,10 +19,18 @@ const Home =()=>{
           Swal.fire({
             title: `${answer.amount}!`,
             text: `O número ${userInput} tem ${answer.amount} 
-            número(s) menor(es) que ele, que tem a mesma quantidade de divisores que o seu sucessor direto.
-            Os números que satisfazem essa condição são: ${answer.numbers.slice(1,-1)}.`,
+            número(s) menor(es) que ele, que tem a mesma quantidade 
+            de divisores que o seu sucessor direto.
+            Os números que satisfazem essa condição são: 
+            ${answer.numbers.slice(1,-1)}.`,
             confirmButtonColor: '#0094FC',
           })
+          localStorage.setItem('answerHistory', JSON.stringify(
+            [...answerHistoryArray, {
+            number: userInput,
+            amount: answer.amount,
+            numbers: answer.numbers
+          }]))
         })
       }
       else{
@@ -34,20 +47,14 @@ const Home =()=>{
     return (
           <div className='content-container'>
               <div className='textDiv'>
-                <div className='content'>
-                <img 
-                src='https://portal.bridge.ufsc.br/wp-content/uploads/2022/06/icone_animado.gif'
-                />
-                <h1 className='title'>
-                  desafio bridge_
+                <h1>
+                  calculadora_
                 </h1>
                 <p>
-                O desafio proposto foi criar uma aplicação web, que calculasse, 
-                a partir de uma entrada k do usuário,
+                A calculadora gera, a partir de uma entrada k do usuário,
                 o número de inteiros positivos n menores que k, para os quais
                 n e n + 1 têm o mesmo número de divisores positivos.
                 </p>
-              </div>
               </div>
             <div className='inputsDiv'>
               <form onSubmit={(e)=> onSubmit(e)}>

@@ -1,0 +1,44 @@
+.content-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 91vh
+}
+
+.textDiv {
+    align-items: center;
+    align-content: center;
+    background-color: #24252E;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.historyInstanceWrapper{
+    border:#0094FC solid 2px;
+    border-radius: 10px;
+    margin: 8px;
+    padding: 5px;
+}
+
+.historyInstancesDiv {
+align-items: flex-start;
+background-color: #FFFFFF;
+color: #24252E;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex: 2;
+overflow-y: scroll;
+height: 90vh;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #24252E;
+}
