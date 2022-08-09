@@ -5,6 +5,7 @@ import {
     NUMBER_INPUTTED,
     AMOUNT_OF_NUMBERS,
     HISTORY_EXPLANATION,
+    TIME_TAKEN,
 } from './terms.js';
 
 const History = () =>{
@@ -27,7 +28,8 @@ const History = () =>{
                     {HISTORY_EXPLANATION}
                 </p>
             </div>
-                { answerHistory.length > 0 ? (
+                { answerHistory.length > 0 ? 
+                (
                     <div className='historyInstancesDiv'>
                         <ul>
                             { answerHistory.map((historyInstance)=>(
@@ -39,6 +41,7 @@ const History = () =>{
                                         <br></br>
                                         Números: {historyInstance.numbers}
                                         <br></br>
+                                        {TIME_TAKEN}{historyInstance.timeTaken} ms
                                     </p>
                                 </li>
                             ))}
@@ -47,7 +50,7 @@ const History = () =>{
                     ) 
                     :
                     <ul className='emptyDiv'>
-                        <li><p> {NO_HISTORY}</p></li>
+                        <li><p> {NO_HISTORY} </p></li>
                     </ul>
                 }     
         </div>

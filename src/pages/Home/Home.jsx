@@ -9,6 +9,7 @@ import {
   INSERT_A_NUMBER,
   WHOLE_LARGER_THAN_ONE,
   CALCULATOR_EXPLANATION,
+  TIME_TAKEN,
  } from './terms';
 
 const Home = () => {
@@ -23,19 +24,26 @@ const Home = () => {
     const onSubmit = (e) => {
       e.preventDefault();
       if(userInput>1 && Number.isInteger(userInput)){
+        const startTime = new Date();
         apiService(userInput).then((response) =>{
+          const endTime = new Date();
+          var difference = endTime.getTime() - startTime.getTime();
           const answer = response.data;
           Swal.fire({
             title: `${answer.amount}!`,
-            text: `O número ${userInput} tem ${answer.amount} ${MODAL_TEXT}
-            ${answer.numbers.slice(1,-1)}.`,
+            text: `O número ${userInput} 
+            tem ${answer.amount} 
+            ${MODAL_TEXT}
+            ${answer.numbers.slice(1,-1)}.
+            ${TIME_TAKEN} ${difference} milissegundos.`,
             confirmButtonColor: '#0094FC',
           })
           localStorage.setItem('answerHistory', JSON.stringify(
             [...answerHistoryArray, {
             number: userInput,
             amount: answer.amount,
-            numbers: answer.numbers
+            numbers: answer.numbers,
+            timeTaken: difference
           }]))
         })
       }

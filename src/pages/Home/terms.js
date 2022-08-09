@@ -9,3 +9,4 @@ o número de inteiros positivos n menores que k, para os quais
 n e n + 1 têm o mesmo número de divisores positivos.
 `;
 export const INSERT_A_NUMBER = `Insira um número:`;
+export const TIME_TAKEN = `O tempo de resposta foi de `;
