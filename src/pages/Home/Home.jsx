@@ -2,13 +2,22 @@ import React, { useState } from 'react';
 import './style.css';
 import Swal from 'sweetalert2';
 import apiService from '../../services/apiService';
+import { 
+  MODAL_TEXT,
+  OK_TRY_AGAIN,
+  INVALID_NUMBER,
+  INSERT_A_NUMBER,
+  WHOLE_LARGER_THAN_ONE,
+  CALCULATOR_EXPLANATION,
+ } from './terms';
 
-const Home =()=>{
+const Home = () => {
     const [userInput, setUserInput] = useState();
     const answerHistory = localStorage.getItem('answerHistory');
+    
     let answerHistoryArray = [];
     if(answerHistory){
-        answerHistoryArray = JSON.parse(answerHistory);
+      answerHistoryArray = JSON.parse(answerHistory);
     }
 
     const onSubmit = (e) => {
@@ -18,10 +27,7 @@ const Home =()=>{
           const answer = response.data;
           Swal.fire({
             title: `${answer.amount}!`,
-            text: `O número ${userInput} tem ${answer.amount} 
-            número(s) menor(es) que ele, que tem a mesma quantidade 
-            de divisores que o seu sucessor direto.
-            Os números que satisfazem essa condição são: 
+            text: `O número ${userInput} tem ${answer.amount} ${MODAL_TEXT}
             ${answer.numbers.slice(1,-1)}.`,
             confirmButtonColor: '#0094FC',
           })
@@ -36,10 +42,10 @@ const Home =()=>{
       else{
         Swal.fire({
           icon: 'error',
-          title: 'Número inválido...',
-          text: 'O número inserido precisa ser um inteiro maior que 1!',
+          title: `${INVALID_NUMBER}`,
+          text: `${WHOLE_LARGER_THAN_ONE}`,
           confirmButtonColor: '#0094FC',
-          confirmButtonText: 'Ok, vou inserir outro!'
+          confirmButtonText: `${OK_TRY_AGAIN}`
         })
       }
     }
@@ -51,16 +57,14 @@ const Home =()=>{
                   calculadora_
                 </h1>
                 <p>
-                A calculadora gera, a partir de uma entrada k do usuário,
-                o número de inteiros positivos n menores que k, para os quais
-                n e n + 1 têm o mesmo número de divisores positivos.
+                  {CALCULATOR_EXPLANATION}
                 </p>
               </div>
             <div className='inputsDiv'>
               <form onSubmit={(e)=> onSubmit(e)}>
                 <div className='inputFieldDiv'>
                   <label>
-                    Insira um número:
+                    {INSERT_A_NUMBER}
                   </label>
                   <input 
                     type="number" 
@@ -74,7 +78,6 @@ const Home =()=>{
                   type='submit'
                   value='Calcular'
                   className='submitButton'
-                  placeholder='Insira um número...'
                 />
               </form>
             </div>
