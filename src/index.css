@@ -1,0 +1,10 @@
+@import url('https://use.typekit.net/skh5uvo.css');
+body, input {
+  margin: 0;
+  font-family: ibm-plex-sans, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

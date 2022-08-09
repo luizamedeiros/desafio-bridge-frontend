@@ -1,0 +1,86 @@
+.content-container{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh
+}
+
+.textDiv {
+  align-items: center;
+  align-content: center;
+  background-color: #24252E;
+  color: #FFFFFF;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.content{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html{
+  min-height: 100%;
+  height: 100%;
+}
+input{
+  margin: 5px;
+}
+label {
+  margin-left: 7px;
+}
+img{
+  width: 30%;
+}
+p{
+  margin: 0 50px;
+}
+form{
+  display: flex;
+  align-items: flex-end;
+}
+.submitButton{
+  color: #0094FC;
+  background-color: #FFFFFF;
+  font-weight: bolder;
+  border: 1.5px solid grey;
+  border-radius: 5px;
+}
+.inputsDiv {
+  align-items: center;
+  background-color: #FFFFFF;
+  color: #24252E;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 2;
+}
+
+.title {
+  color: #0094FC;
+  font-size: xx-large;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.inputFieldDiv{
+  display: flex;
+  flex-direction: column;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .content-container{ 
+    flex-direction: column;
+  }
+}
