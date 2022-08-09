@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
+import {
+    NUMBER_INPUTTED,
+    AMOUNT_OF_NUMBERS,
+} from './terms.js';
 
 const History = () =>{
     const [answerHistory, setAnswerHistory] = useState([]);
@@ -23,14 +27,13 @@ const History = () =>{
                 { answerHistory.map((historyInstance)=>(
                 <li className='historyInstanceWrapper'>
                 <p>
-                    Número fornecido: {historyInstance.number}
+                    {NUMBER_INPUTTED}{historyInstance.number}
                     <br></br>
-                    Quantidade de números que satisfazem a condição: {historyInstance.amount}
+                    {AMOUNT_OF_NUMBERS}{historyInstance.amount}
                     <br></br>
                     Números: {historyInstance.numbers}
                     <br></br>
                 </p>
-
                 </li>
                 ))}
                 </ul>
