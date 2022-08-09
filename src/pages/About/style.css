@@ -22,8 +22,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
+.content a{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    width: 25px;
+    border-radius: 100%;;
+}
 .linksDiv {
     align-items: center;
     background-color: #FFFFFF;
@@ -33,7 +42,24 @@
     justify-content: center;
     flex: 2;
 }
-
+.fakeButton{
+    align-items: center;
+    background-color: rgb(179, 179, 179);
+    border: solid 1px black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 5px;
+    width: 30vw;
+}
+.fakeButton:hover{
+    background-color: #0094FC;
+    color: #FFFFFF;
+}
+.fakeButton a{
+    color: inherit;
+}
 img{
     width: 30%;
 }
