@@ -1,9 +1,27 @@
 .content-container{
   display: flex;
   flex-wrap: wrap;
-  height: 100vh
+  height: 92vh
 }
-
+ul{
+  background-color: #0094FC;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: center;
+  height: 8vh
+}
+a{
+  text-decoration: none;
+  color: #24252E
+}
+.headerText {
+  color: #FFFFFF;
+  font-size: x-large;
+}
 .textDiv {
   align-items: center;
   align-content: center;
@@ -78,7 +96,9 @@ form{
 .submitButton:hover {
   cursor: pointer;
 }
-
+a:hover{
+  text-decoration: underline;
+}
 @media only screen and (max-width: 500px) {
   .content-container{ 
     flex-direction: column;
