@@ -41,6 +41,7 @@ seus respectivos resultados, e tempo de resposta de cada requisição; </li>
 Algumns aspectos da aplicação poderiam ser repensados para oferecer uma experiência ainda melhor ao usuário. Entre eles, pode-se citar:
 <ul>
 <li> Inclusão de responsividade; </li>
+<li> Melhora no algoritmo que processa o cálculo, no backend </li>
 <li> Implementação de testes unitários, no backend; </li>
 <li> Descarte dos modais em telas menores, para facilitar a visualização do resultado, e ser uma experiência mais confortável e adaptada à realidade de telas pequenas. </li>
 </ul>
