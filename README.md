@@ -46,3 +46,24 @@ Algumns aspectos da aplicação poderiam ser repensados para oferecer uma experi
 </ul>
 
 ## Capturas de Tela
+  <ul>
+    <li>
+    <h3> Captura de tela - Calculadora </h3>
+    <img src="https://github.com/luizamedeiros/desafio-bridge-frontend/blob/main/public/appScreenshots/CalculatorScreen.png"/>
+    </li>
+    <li>
+      <h3> Captura de tela - Calculadora - modal de resultado </h3>
+      <img src="https://github.com/luizamedeiros/desafio-bridge-frontend/blob/main/public/appScreenshots/CalculatorWithModal.png"/>
+      </li>
+      <li>
+    <h3> Captura de tela - Histórico </h3>
+    <img src="https://github.com/luizamedeiros/desafio-bridge-frontend/blob/main/public/appScreenshots/HistoryScreen.png"/>
+    </li>
+      <li>
+    <h3> Captura de tela - Histórico vazio </h3>
+    <img src="https://github.com/luizamedeiros/desafio-bridge-frontend/blob/main/public/appScreenshots/HistoryEmptyScreen.png"/>
+    </li>
+      <li>
+      <h3> Captura de tela - Sobre o desafio </h3>
+      <img src="https://github.com/luizamedeiros/desafio-bridge-frontend/blob/main/public/appScreenshots/AboutPage.png"/>
+      </li>
