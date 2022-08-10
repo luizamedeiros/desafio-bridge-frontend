@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+## Resumo do Projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O projeto foi proposto como um desafio do processo seletivo para bolsista de Desenvolvimento Web Full Stack do <a href='https://portal.bridge.ufsc.br/'> Laboratório Bridge</a>, buscando construir uma aplicação web que "permita que o usuário insira um número
+inteiro k e calcule o número de inteiros positivos n menores que k, para os quais
+n e n + 1 têm o mesmo número de divisores positivos." Por exemplo, caso o usuário inserisse o número 5, receberia como retorno o número 2 sendo o único que atende a esse requisito, logo, existe 1 número que satisfaz essa condição para o número 5.
+<br/><br/>
+As restrições técnicas foram: 
+<ul>
+<li> Os cálculos devem ser executados somente pelo backend; </li>
+<li> Estilize a página utilizando a ferramenta/biblioteca CSS de sua preferência; </li>
+</ul>
+<br/>
+Alguns bônus sugeridos e incorporados, foram:
+<li> Armazenamento e apresentação do histórico dos números informados pelo usuário junto com
+seus respectivos resultados, e tempo de resposta de cada requisição; </li>
+<li> Definição de limites e validações para que a aplicação não apresente erros - ou seja, o campo de input da calculador não pode ser vazio, e precisa ser um número inteiro e maior que 1; </li>
+<li> A solução foi publicada em um cloud provider. </li>
 
-## Available Scripts
+## Tecnologias e abordagens
 
-In the project directory, you can run:
+<ul>
+<li> Para a implementação do frontend do projeto, foi utilizado o <a href="https://reactjs.org/"> ReactJS</a>, conforme sugerido pelo Laboratório; </li>
+<li> Para a visualização dos resultados do cálculo, foi utilizado o <a href="https://sweetalert2.github.io/">Sweetalert2</a>, por apresentar modais versáteis e customizáveis; </li>
+<li> Para o registro do histórico dos resultados obtidos, bem como os números inseridos pelo usuário, foi utilizado o armazenamento no <strong>local storage</strong> do navegador; </li>
+<li> A estilização da página foi feita com <strong>CSS</strong>, sendo pensada para se alinhar à identidade visual do Laboratório, levando em consideração suas cores principais, fontes, imagens, e recursos estilísticos; </li>
+<li> O roteamento foi feito através do <a href="https://www.npmjs.com/package/react-router-dom">React Router Dom</a>, tornando a experiência do usuário mais fluida ao construir um aplicativo de página única (SPA);</li>
+<li> Para a implementação do backend do projeto, foi utilizado o <a href="https://www.java.com/pt-BR/">Java</a>, juntamente ao <strong>Spring Boot</strong>. </li>
+<li> Para a hospedagem do backend da aplicação, foi utilizado o <a href="https://www.heroku.com/">heroku</a>, e o backend pode ser acessado através <a href="https://dbb-22.herokuapp.com/calculate">deste link</a>. Para fazer um cálculo diretamente do navegador, é necessário apenas concatenar ao final do link '?input=5', ou qualquer valor desejado, para visualizar o retorno no navegador.</li>
+<li> Para a hospedagem do frontend da aplicação, foi utilizado o <a href="https://vercel.com/">Vercel</a>. A aplicação pode ser acessada online através <a href='https://desafio-bridge-frontend-luizamedeiros.vercel.app/'>deste link</a>. O motivo de utilizar-se dois provedores distintos foi apenas para experimentar a facilidade/usabilidade de cada um.</li>
+</ul>
 
-### `npm start`
+## Como executar?
+<ol>
+<li> Baixe e descompacte o projeto, ou faça um <b> git clone </b> no repositório. </li>
+<li> Execute <b> npm install </b> na pasta do projeto, para baixar as dependências necessárias. </li>
+<li> Execute <b> npm start </b> na pasta do projeto, para abrir o projeto em modo de desenvolvimento, ou <b> npm build </b> para abrir o projeto em modo de produção. </li>
+<li> A aplicação abrirá no seu navegador padrão </li>
+</ol>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Possíveis melhorias
+Algumns aspectos da aplicação poderiam ser repensados para oferecer uma experiência ainda melhor ao usuário. Entre eles, pode-se citar:
+<ul>
+<li> Inclusão de responsividade; </li>
+<li> Implementação de testes unitários, no backend; </li>
+<li> Descarte dos modais em telas menores, para facilitar a visualização do resultado, e ser uma experiência mais confortável e adaptada à realidade de telas pequenas. </li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Capturas de Tela
